@@ -10,7 +10,11 @@ type PlayButtonProps = {
 
 export const PlayButton: React.FC<PlayButtonProps> = ({ onPress, style, label = 'Play' }) => {
   return (
-   <TouchableOpacity style={[styles.playButton, style]} onPress={onPress}>
+   <TouchableOpacity 
+    focusable={true} 
+    style={[styles.playButton, style]} 
+    onPress={onPress}
+  >
       <Text style={styles.playTriangle}>▶</Text>
       <Text style={styles.playText}>{label}</Text>
     </TouchableOpacity>

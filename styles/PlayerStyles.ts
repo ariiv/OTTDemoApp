@@ -17,7 +17,6 @@ export const PlayerStyles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 20,
   },
-
   overlay: {
     ...StyleSheet.absoluteFillObject,
     justifyContent: 'space-between',
@@ -60,5 +59,37 @@ export const PlayerStyles = StyleSheet.create({
     color: '#fff',
     fontSize: 12,
     marginTop: 2,
+  },
+  loadingOverlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.6)',
+  },
+  loadingText: {
+    color: '#fff',
+    fontSize: 16,
+    marginTop: 10,
+  },
+  errorOverlay: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#000',
+  },
+  errorButton: {
+    marginTop: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    backgroundColor: '#ff3333',
+    borderRadius: 8,
+  },
+  errorButtonText: {
+    color: '#fff',
+    fontSize: 16,
   },
 });

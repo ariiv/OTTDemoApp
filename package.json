@@ -9,7 +9,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
-    "test": "jest"
+    "test": "jest --preset jest-expo"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
@@ -57,11 +57,13 @@
     "ts-jest": "^29.4.1",
     "typescript": "~5.8.3"
   },
- "jest": {
+  "jest": {
     "preset": "jest-expo",
     "setupFilesAfterEnv": [
       "@testing-library/jest-native/extend-expect"
     ],
+    "timers": "fake",
+    "testEnvironment": "jsdom",
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|@react-native|expo|@expo|expo-modules-core)/"
     ],

@@ -1,50 +1,54 @@
-# Welcome to your Expo app 👋
+# 🎬 Expo TV Streaming App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native app built with [Expo](https://expo.dev/) and [expo-router](https://expo.github.io/router/) that showcases a simple React Native streaming app, designed for **Android TV**.  
+It features a home screen, details screen, video player, and a few sample unit + integration tests with Jest.
+The app was created under a limited timeframe, so some known limitations and TODOs remain.
 
-## Get started
+## Setup
 
-1. Install dependencies
+1. Clone the repo
+git clone https://github.com/ariiv/OTTDemoApp.git
 
-   ```bash
-   npm install
-   ```
+2. Install dependencies 
+npm install
 
-2. Start the app
+3. Start an Android TV emulator in Android Studio
+Open Android Studio → Device Manager → Create Device → TV → Android TV (720p or 1080p).
+Start the emulator
 
-   ```bash
-   npx expo start
-   ```
+4. Run the app
+npx expo start --android
 
-In the output, you'll find options to open the app in a
+## Libraries used
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Core framework
+react-native: Base UI framework.
+expo: Provides the managed workflow with prebuilt native modules.
+expo-router: File-based routing system (used for navigation).
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Styling and media
+expo-linear-gradient: For gradient overlays on hero/banner images.
+@expo/vector-icons: Used Ionicons in player and in details.
+expo-av: Used for video playback.
 
-## Get a fresh project
+### Tests
+jest: Test runner.
 
-When you're ready, run:
+## How to run tests
+Run tests with 'npm test'.
 
-```bash
-npm run reset-project
-```
+Currently:
+* 3 unit tests and 1 integration test are included.
+* Tests do not run successfully due to a React Native import error.
+* Based on community discussions, this appears to be a React Native + Jest config issue. In the given timeframe, I couldn't find solution to this problem.
+* Resolving it remains as TODO.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Known limitations and TODOs
+In the given timeframe functioning app was created, but it has its' known limitations:
+* Tests fail to run due to React Native import issue.
+* Styling and functionality is basic
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Future TODOs:
+* Fix Jest + React Native import issue.
+* Improve app styling and enhance functionality.
+* Clean code

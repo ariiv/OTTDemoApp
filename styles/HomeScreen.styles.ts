@@ -100,7 +100,7 @@ export const styles = StyleSheet.create({
   },
   thumbnail: {
     width: '100%',
-    height: 200,
+    height: 100,
     borderRadius: 8,
     marginBottom: 5,
   },
@@ -108,6 +108,11 @@ export const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 14,
     fontWeight: '600',
+    backgroundColor: 'rgba(0,0,0,0.3)',
+    paddingHorizontal: 4,
+    paddingVertical: 2,
+    borderRadius: 4,
+    overflow: 'hidden',
   },
    playButtonOverlay: {
     position: 'absolute',
