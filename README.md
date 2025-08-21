@@ -1,6 +1,6 @@
 # 🎬 Expo TV Streaming App
 
-A React Native app built with [Expo](https://expo.dev/) and [expo-router](https://expo.github.io/router/) that showcases a simple React Native streaming app, designed for **Android TV**.  
+A React Native app built with [Expo](https://expo.dev/) that showcases a simple React Native streaming app, designed for **Android TV**.  
 It features a home screen, details screen, video player, and a few sample unit + integration tests with Jest.
 The app was created under a limited timeframe, so some known limitations and TODOs remain.
 
